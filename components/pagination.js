@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import client from "../lib/sanity";
 import PostPreview from "../components/post-preview";
 
@@ -6,20 +6,25 @@ import PostPreview from "../components/post-preview";
 const EdibleSpecies = () => {
 	const [species, setSpecies] = useState();
 	const [pageNum, setPageNum] = useState(1);
-	const [toggleGrid, setToggleGrid] = useState("3");
+	const [toggleGrid, setToggleGrid] = useState(3);
 
 	const swap = () => {
-		if (toggleGrid !== 3) {
-			setToggleGrid(3);
-		} else {
+		if (toggleGrid !== 2) {
 			setToggleGrid(2);
+		} else {
+			setToggleGrid(3);
 		}
 	};
 
-	React.useEffect(() => {
+	useEffect(() => {
 		// When the pageNum changes, let's re-fetch the data
 		fetchSpecies(pageNum);
 	}, [pageNum]);
+
+	// useEffect(() => {
+	// 	// When the pageNum changes, let's re-fetch the data
+	// 	setToggleGrid("3");
+	// }, []);
 
 	async function fetchSpecies(posts) {
 		const postFields = `
@@ -65,7 +70,9 @@ const EdibleSpecies = () => {
 				Swap
 			</button>
 			<div
-				className={`grid grid-cols-1 md:grid-cols-${toggleGrid} md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32 gap-8`}
+				className={`grid ${toggleGrid === 3 ? "grid-cols-3" : "grid-cols-2"} ${
+					toggleGrid === 3 ? "md:grid-cols-3" : "md:grid-cols-2"
+				} md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32 gap-8`}
 			>
 				{species &&
 					species.map((post) => (
