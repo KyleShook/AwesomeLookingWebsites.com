@@ -9,10 +9,10 @@ const EdibleSpecies = () => {
 	const [toggleGrid, setToggleGrid] = useState("3");
 
 	const swap = () => {
-		if (toggleGrid !== 2) {
-			setToggleGrid(2);
-		} else {
+		if (toggleGrid !== 3) {
 			setToggleGrid(3);
+		} else {
+			setToggleGrid(2);
 		}
 	};
 
@@ -48,7 +48,7 @@ const EdibleSpecies = () => {
 		// With the data, change the state of this component:
 		setSpecies(newSpecies);
 	}
-	console.log(pageNum, species);
+	console.log(toggleGrid);
 	return (
 		<>
 			<button disabled={pageNum === 1} onClick={() => setPageNum(pageNum - 1)}>
