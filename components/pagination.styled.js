@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 	position: relative;
-	height: 0;
+	/* height: 0; */
 	/* Formula is: (height / width * 100%) */
-	padding-top: calc(1496 / 409 * 100%);
+	/* padding-top: calc(1496 / 409 * 100%); */
 	width: 100%;
 
 	button {
@@ -13,9 +13,9 @@ export const Container = styled.div`
 	}
 `;
 export const Wrapper = styled.div`
-	position: absolute;
+	/* position: absolute;
 	top: 0;
 	left: 0;
 	max-width: 100%;
-	height: auto;
+	height: auto; */
 `;
