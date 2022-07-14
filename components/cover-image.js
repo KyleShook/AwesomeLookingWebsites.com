@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 const Container = styled.div`
 	width: 100%;
+	display: block;
 
 	& > span {
 		position: unset !important;
@@ -49,12 +50,18 @@ export default function CoverImage({
 
 	return (
 		<div
-			className={cn("shadow-small -mx-5 sm:mx-0", {
-				"hover:shadow-medium transition-shadow duration-300": slug,
-			})}
+			className={cn(
+				`shadow-small -mx-5 sm:mx-0 ${
+					isPostPage ? "null" : "lg:max-h-[17.5rem]"
+				}`,
+				{
+					"hover:shadow-medium transition-shadow duration-300": slug,
+				}
+			)}
 			style={{
-				maxHeight: isPostPage ? " none" : isGrid,
+				// maxHeight: isPostPage ? " none" : isGrid,
 				overflow: "hidden",
+				// minWidth: "477px",
 			}}
 		>
 			{slug ? (

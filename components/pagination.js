@@ -41,8 +41,8 @@ const EdibleSpecies = () => {
 			`
       *[_type == "post"] | order(publishedAt desc){
         ${postFields}
-      }[0..3]
-      [(($pageNum - 1) *3)...($pageNum * 3)]
+      }[0..12]
+      [(($pageNum - 1) *12)...($pageNum * 12)]
     `,
 			{
 				// The only thing we're changing is the pageNum param
@@ -131,16 +131,16 @@ const EdibleSpecies = () => {
 					>
 						Next
 					</button>
-					<button style={{ marginLeft: " 36px" }} onClick={swap}>
+					{/* <button style={{ marginLeft: " 36px" }} onClick={swap}>
 						Swap
-					</button>
+					</button> */}
 				</div>
 
 				<div
 					className={`grid ${
 						toggleGrid === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"
 					} ${
-						toggleGrid === 3 ? "md:grid-cols-2" : "md:grid-cols-2"
+						toggleGrid === 3 ? "md:grid-cols-2" : "md:grid-cols-1"
 					} md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32 gap-8`}
 				>
 					{species &&
