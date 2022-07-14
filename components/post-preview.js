@@ -10,6 +10,7 @@ export default function PostPreview({
 	excerpt,
 	author,
 	slug,
+	toggleGrid,
 }) {
 	return (
 		<div>
@@ -19,6 +20,7 @@ export default function PostPreview({
 					title={title}
 					imageObject={coverImage}
 					url={imageBuilder(coverImage).url()}
+					toggleGrid={toggleGrid}
 				/>
 			</div>
 			<div className="text-lg mb-4">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { imageBuilder } from "../lib/sanity";
 import Image from "next/image";
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 const Container = styled.div`
 	width: 100%;
@@ -19,7 +20,19 @@ const Container = styled.div`
 	}
 `;
 
-export default function CoverImage({ title, url, imageObject, slug }) {
+export default function CoverImage({
+	title,
+	url,
+	imageObject,
+	slug,
+	toggleGrid,
+}) {
+	const router = useRouter();
+
+	const isPostPage = router.pathname.includes("/posts");
+
+	const isGrid = toggleGrid === 3 ? "280px" : "430px";
+
 	const image = (
 		<Container>
 			<Image
@@ -39,6 +52,10 @@ export default function CoverImage({ title, url, imageObject, slug }) {
 			className={cn("shadow-small -mx-5 sm:mx-0", {
 				"hover:shadow-medium transition-shadow duration-300": slug,
 			})}
+			style={{
+				maxHeight: isPostPage ? " none" : isGrid,
+				overflow: "hidden",
+			}}
 		>
 			{slug ? (
 				<Link as={`/posts/${slug}`} href="/posts/[slug]">

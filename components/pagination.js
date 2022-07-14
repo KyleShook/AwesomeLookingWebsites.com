@@ -153,6 +153,7 @@ const EdibleSpecies = () => {
 								author={post.author}
 								slug={post.slug}
 								excerpt={post.excerpt}
+								toggleGrid={toggleGrid}
 							/>
 						))}
 				</div>
