@@ -1,7 +1,17 @@
-import '../styles/index.css'
+import Header from "../components/header";
+import Container from "../components/container";
+import "../styles/index.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	return (
+		<>
+			<Container>
+				<Header />
+			</Container>
+
+			<Component {...pageProps} />
+		</>
+	);
 }
 
-export default MyApp
+export default MyApp;
