@@ -2,9 +2,18 @@
 @tailwind base;
 @tailwind components;
 article a {
-    color: rgb(49, 49, 182);
-    text-decoration: underline;
+	color: rgb(49, 49, 182);
+	text-decoration: underline;
+}
+*::-moz-selection {
+	/* Code for Firefox */
+	color: white;
+	background: black;
+}
+
+*::selection {
+	color: white;
+	background: black;
 }
 /* purgecss end ignore */
 @tailwind utilities;
-

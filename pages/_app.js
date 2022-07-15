@@ -1,13 +1,13 @@
 import Header from "../components/header";
-import Container from "../components/container";
+import HeaderContainer from "../components/headerContainer";
 import "../styles/index.css";
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<Container>
+			<HeaderContainer>
 				<Header />
-			</Container>
+			</HeaderContainer>
 
 			<Component {...pageProps} />
 		</>
