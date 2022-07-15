@@ -20,11 +20,6 @@ const EdibleSpecies = () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	// When the pageNum changes, let's re-fetch the data
-	// 	setToggleGrid("3");
-	// }, []);
-
 	async function fetchSpecies(posts) {
 		const postFields = `
         _id,
@@ -58,8 +53,8 @@ const EdibleSpecies = () => {
 	};
 
 	useEffect(() => {
-		if (pageNum >= 1) {
-			router.push(
+		if (pageNum >= 2) {
+			router.replace(
 				{
 					pathname: router.pathname,
 					query: { page: pageNum },
@@ -69,7 +64,7 @@ const EdibleSpecies = () => {
 				{ scroll: false }
 			);
 		} else {
-			router.push({ pathname: "/" }, undefined, { scroll: false });
+			router.replace({ pathname: "/" }, undefined, { scroll: false });
 		}
 	}, [pageNum, router.pathname]);
 	// console.log(toggleGrid);
@@ -87,9 +82,9 @@ const EdibleSpecies = () => {
 	}, [pageNum]);
 	return (
 		<Container>
-			<Head>
+			{/* <Head>
 				<title>Page {pageNum}</title>
-			</Head>
+			</Head> */}
 			<Wrapper>
 				<div className="mb-12">
 					{/* {pageNum !== 1 && (
