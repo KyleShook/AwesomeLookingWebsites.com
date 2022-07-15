@@ -15,5 +15,10 @@ article a {
 	color: white;
 	background: black;
 }
+
+body {
+	font-family: sans-serif;
+	background-image: url(/images/noisy.png);
+}
 /* purgecss end ignore */
 @tailwind utilities;

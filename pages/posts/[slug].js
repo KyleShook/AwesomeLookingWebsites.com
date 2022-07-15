@@ -38,7 +38,7 @@ export default function Post({ post, morePosts, preview }) {
 								date={post.date}
 								author={post.author}
 							/>
-							<PostBody content={post.body} />
+							{/* <PostBody content={post.body} /> */}
 						</article>
 
 						{/* <Comments comments={post.comments} />

@@ -10,6 +10,7 @@ import EdibleSpecies from "../components/pagination";
 
 import ReactDOM from "react-dom";
 import { useState, useEffect } from "react";
+import Listings from "../components/Listings";
 
 export default function Index({ allPosts, preview }) {
 	// console.log(allPosts);
@@ -23,7 +24,8 @@ export default function Index({ allPosts, preview }) {
 				</Head>
 				<Container>
 					<Intro />
-					<EdibleSpecies />
+					{/* <EdibleSpecies /> */}
+					<Listings />
 					{/* {heroPost && (
 						<HeroPost
 							title={heroPost.title}

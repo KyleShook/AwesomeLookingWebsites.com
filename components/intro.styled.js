@@ -8,7 +8,7 @@ export const IntroContainer = styled.section`
 export const PreTitle = styled.span`
 	text-transform: none;
 	font-size: 100px;
-	color: white;
+	color: transparent;
 	-webkit-text-stroke: 2px black;
 	font-weight: 900;
 	/* text-transform: uppercase; */
