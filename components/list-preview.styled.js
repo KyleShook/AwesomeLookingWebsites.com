@@ -9,12 +9,12 @@ export const ListingContainer = styled.div`
 
 	&:last-child {
 		border-bottom: 4px solid black;
-		margin-bottom: 40px;
+		margin-bottom: 1rem;
 	}
 `;
 
 export const InfoContainer = styled.div`
-	padding: 0 20px;
+	padding: 0 0 0 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -36,7 +36,7 @@ export const BottomContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	margin-bottom: -10px;
+	margin-bottom: -6px;
 
 	a {
 		text-decoration: underline;

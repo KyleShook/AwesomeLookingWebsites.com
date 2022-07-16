@@ -36,10 +36,10 @@ export default function ListPreview({
 					</Link>
 				</ListTitle>
 				<BottomContainer>
-					<Date dateString={date} />
 					<a style={{ fontSize: "30px" }} href="#">
-						View Website
+						View Website↗
 					</a>
+					<Date dateString={date} />
 				</BottomContainer>
 			</InfoContainer>
 			<p className="text-lg leading-relaxed mb-4">{excerpt}</p>

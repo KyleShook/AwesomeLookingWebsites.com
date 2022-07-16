@@ -3,14 +3,15 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<footer className="pt-12 pb-12 text-center text-xl font-bold">
+		<footer className="pt-12 pb-12 text-center text-xl ">
 			<Container>
 				<Link href="/">
 					{/* <a className="hover:underline">👀 alw</a> */}
-					<a className="underline underline-offset-2">
+					<a className="font-bold underline underline-offset-2">
 						AWESOME LOOKING WEBSITES
 					</a>
 				</Link>
+				<br />v 1.0.0
 			</Container>
 		</footer>
 	);
