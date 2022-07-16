@@ -19,6 +19,10 @@ const Container = styled.div`
 		position: relative !important;
 		height: unset !important;
 	}
+
+	/* .custom-img:hover {
+		mix-blend-mode: difference;
+	} */
 `;
 
 export default function CoverImage({

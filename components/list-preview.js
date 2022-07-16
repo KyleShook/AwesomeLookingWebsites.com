@@ -31,7 +31,7 @@ export default function ListPreview({
 				/>
 			</div>
 			<InfoContainer>
-				<ListTitle className="text-3xl mb-3 fb">
+				<ListTitle className="text-4xl mb-3 fb">
 					<Link as={`/posts/${slug}`} href="/posts/[slug]">
 						<a className="hover:underline">{title}</a>
 					</Link>

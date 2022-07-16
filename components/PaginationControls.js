@@ -1,3 +1,5 @@
+import { Previous, Next } from "./PaginationControls.styled";
+
 const PaginationControls = (props) => {
 	const { pageNum, nextClick, prevClick, totalPosts } = props;
 
@@ -9,20 +11,22 @@ const PaginationControls = (props) => {
 
 	return (
 		<div className="mb-3 justify-between flex">
-			<button
+			<Previous
+				pageNum={pageNum}
 				disabled={pageNum === 1}
 				onClick={prevClick}
 				style={{ textDecoration: pageNum === 1 ? "line-through" : "none" }}
 			>
 				Previous
-			</button>
+			</Previous>
 			{/* <button style={{ marginLeft: " 36px" }} onClick={swap}>
                         Grid
                     </button> */}
 			<p style={{ fontSize: "24px" }}>
 				Page {pageNum} of {totalPages}
 			</p>
-			<button
+			<Next
+				lastPage={lastPage}
 				onClick={nextClick}
 				disabled={lastPage}
 				style={{
@@ -30,7 +34,7 @@ const PaginationControls = (props) => {
 				}}
 			>
 				Next
-			</button>
+			</Next>
 		</div>
 	);
 };

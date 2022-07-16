@@ -27,7 +27,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const ListTitle = styled.h3`
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: 900;
 	padding-top: 5px;
 `;
@@ -38,10 +38,7 @@ export const BottomContainer = styled.div`
 	width: 100%;
 	margin-bottom: -6px;
 
-	a {
-		text-decoration: underline;
-	}
 	a:hover {
-		color: gray;
+		text-decoration: underline;
 	}
 `;

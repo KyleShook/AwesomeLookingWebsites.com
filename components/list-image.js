@@ -8,8 +8,10 @@ import { useRouter } from "next/router";
 const Container = styled.div`
 	img {
 		width: 100%;
-		max-width: 500px;
-		min-width: 500px;
+		max-width: 600px;
+		min-width: 600px;
+		/* mix-blend-mode: difference;
+		filter: invert(1); */
 	}
 `;
 
