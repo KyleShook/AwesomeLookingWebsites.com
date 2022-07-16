@@ -16,6 +16,7 @@ export default function ListPreview({
 	excerpt,
 	author,
 	slug,
+	websiteURL,
 	toggleGrid,
 }) {
 	return (
@@ -36,7 +37,12 @@ export default function ListPreview({
 					</Link>
 				</ListTitle>
 				<BottomContainer>
-					<a style={{ fontSize: "30px" }} href="#">
+					<a
+						style={{ fontSize: "30px" }}
+						href={websiteURL}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						View Website↗
 					</a>
 					<Date dateString={date} />

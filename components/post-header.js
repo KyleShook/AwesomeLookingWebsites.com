@@ -4,7 +4,13 @@ import CoverImage from "../components/cover-image";
 import PostTitle from "../components/post-title";
 import { imageBuilder } from "../lib/sanity";
 import Link from "next/link";
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({
+	title,
+	coverImage,
+	date,
+	author,
+	websiteURL,
+}) {
 	return (
 		<>
 			<div className="mb-4 md:mb-8 -mx-5 sm:mx-0">
@@ -15,11 +21,17 @@ export default function PostHeader({ title, coverImage, date, author }) {
 				<PostTitle>{title}</PostTitle>
 				<div className="mb-6 text-3xl">
 					{/* <Date dateString={date} /> */}
-					<Link href="/">
-						<a style={{ color: "black" }} className="hover:underline">
-							View Website↗
-						</a>
-					</Link>
+
+					<a
+						style={{ color: "black" }}
+						className="hover:underline"
+						href={websiteURL}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						View Website↗
+					</a>
+
 					<br />
 					<Link href="/">
 						<a style={{ color: "black" }} className="hover:underline">

@@ -40,13 +40,12 @@ const Listings = ({ posts }) => {
 		fetchIds();
 	}, []);
 
-	console.log(totalPosts);
-
 	async function fetchSpecies(posts) {
 		const postFields = `
         _id,
         name,
         title,
+		url,
         'date': publishedAt,
         excerpt,
         'slug': slug.current,
@@ -136,6 +135,7 @@ const Listings = ({ posts }) => {
 								slug={post.slug}
 								excerpt={post.excerpt}
 								toggleGrid={toggleGrid}
+								websiteURL={post.url}
 							/>
 						))}
 				</div>
