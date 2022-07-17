@@ -45,6 +45,7 @@ export const ListTitle = styled.h3`
 
 	@media (max-width: 650px) {
 		display: none;
+		line-height: initial;
 
 		/* a {
 			text-decoration: underline;
@@ -61,7 +62,7 @@ export const BottomContainer = styled.div`
 	font-size: 30px;
 
 	@media (max-width: 1100px) {
-		font-size: 20px;
+		font-size: 25px;
 	}
 	@media (max-width: 650px) {
 		/* flex-direction: column; */
@@ -70,6 +71,10 @@ export const BottomContainer = styled.div`
 		a {
 			text-decoration: underline;
 		}
+	}
+
+	@media (max-width: 400px) {
+		font-size: 20px;
 	}
 
 	a:hover {
@@ -81,11 +86,15 @@ export const MobileListTitle = styled.h3`
 	display: none;
 	font-size: 60px;
 	font-weight: 900;
-	line-height: 3rem;
+	/* line-height: 3rem; */
+	margin-top: -12px;
 
 	@media (max-width: 650px) {
 		display: initial;
 		width: 100%;
-		padding-top: 12px;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 40px;
 	}
 `;
