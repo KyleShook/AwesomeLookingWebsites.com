@@ -3,7 +3,7 @@
 @tailwind components;
 article a {
 	color: rgb(49, 49, 182);
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 *::-moz-selection {
 	/* Code for Firefox */
@@ -14,6 +14,11 @@ article a {
 *::selection {
 	color: white;
 	background: black;
+}
+
+body {
+	font-family: sans-serif;
+	background-image: url(/images/noisy.png);
 }
 /* purgecss end ignore */
 @tailwind utilities;

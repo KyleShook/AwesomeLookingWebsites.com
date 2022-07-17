@@ -11,14 +11,19 @@ import Layout from "../../components/layout";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
-import Form from "../../components/form";
+import Cookie from "js-cookie";
+import { parseCookies } from "../../lib/parseCookies";
+import { useEffect } from "react";
 
 export default function Post({ post, morePosts, preview }) {
 	const router = useRouter();
 	if (!router.isFallback && !post?.slug) {
 		return <ErrorPage statusCode={404} />;
 	}
+
+	useEffect(() => {
+		Cookie.set("PageNumber", "2");
+	}, []);
 	return (
 		<Layout preview={preview}>
 			<Container>
@@ -37,15 +42,16 @@ export default function Post({ post, morePosts, preview }) {
 								coverImage={post.coverImage}
 								date={post.date}
 								author={post.author}
+								websiteURL={post.url}
 							/>
-							<PostBody content={post.body} />
+							{/* <PostBody content={post.body} /> */}
 						</article>
 
 						{/* <Comments comments={post.comments} />
             <Form _id={post._id} /> */}
 
-						<SectionSeparator />
-						{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+						{/* <SectionSeparator />
+						{morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
 					</>
 				)}
 			</Container>

@@ -3,22 +3,41 @@ import Date from "../components/date";
 import CoverImage from "../components/cover-image";
 import PostTitle from "../components/post-title";
 import { imageBuilder } from "../lib/sanity";
-export default function PostHeader({ title, coverImage, date, author }) {
+import Link from "next/link";
+export default function PostHeader({
+	title,
+	coverImage,
+	date,
+	author,
+	websiteURL,
+}) {
 	return (
 		<>
-			<PostTitle>{title}</PostTitle>
-			{/* <div className="hidden md:block md:mb-12">
-        <Avatar name={author?.name} picture={author?.picture} />
-      </div> */}
-			<div className="mb-8 md:mb-16 -mx-5 sm:mx-0">
+			<div className="mb-4 md:mb-8 -mx-5 sm:mx-0">
 				<CoverImage title={title} imageObject={coverImage} url={coverImage} />
 			</div>
-			<div className="max-w-2xl">
-				{/* <div className="block md:hidden mb-6">
-					<Avatar name={author?.name} picture={author?.picture} />
-				</div> */}
-				<div className="mb-6 text-lg">
-					<Date dateString={date} />
+
+			<div className="flex justify-between items-center">
+				<PostTitle>{title}</PostTitle>
+				<div className="mb-6 text-3xl">
+					{/* <Date dateString={date} /> */}
+
+					<a
+						style={{ color: "black" }}
+						className="hover:underline"
+						href={websiteURL}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						View Website↗
+					</a>
+
+					<br />
+					<Link href="/">
+						<a style={{ color: "black" }} className="hover:underline">
+							Return Home
+						</a>
+					</Link>
 				</div>
 			</div>
 		</>

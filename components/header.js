@@ -5,7 +5,8 @@ export default function Header() {
 		<h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 ">
 			<Link href="/">
 				{/* <a className="hover:underline">👀 alw</a> */}
-				<a className="hover:underline">👀</a>
+				{/* <a className="hover:underline">👀</a> */}
+				<a className="hover:underline">ALW</a>
 			</Link>
 		</h2>
 	);

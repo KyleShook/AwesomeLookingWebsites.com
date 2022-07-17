@@ -6,26 +6,37 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 
 const Container = styled.div`
-	width: 100%;
-	display: block;
-
-	& > span {
-		position: unset !important;
+	img {
+		width: 100%;
+		max-width: 600px;
+		min-width: 600px;
+		transition: 0.5s;
+		/* mix-blend-mode: difference;
+		filter: invert(1); */
 	}
 
-	.custom-img {
-		object-fit: contain;
-		width: 100% !important;
-		position: relative !important;
-		height: unset !important;
+	@media (max-width: 1280px) {
+		img {
+			max-width: 400px;
+			min-width: 400px;
+		}
+	}
+	@media (max-width: 1100px) {
+		img {
+			max-width: 300px;
+			min-width: 300px;
+		}
 	}
 
-	/* .custom-img:hover {
-		mix-blend-mode: difference;
-	} */
+	@media (max-width: 650px) {
+		img {
+			max-width: 600px;
+			min-width: 300px;
+		}
+	}
 `;
 
-export default function CoverImage({
+export default function ListImage({
 	title,
 	url,
 	imageObject,
@@ -40,34 +51,26 @@ export default function CoverImage({
 
 	const image = (
 		<Container>
-			<Image
+			{/* <Image
 				quality={100}
+				width={"300px"}
+				height={"250px"}
 				layout="fill"
 				alt={`Cover Image for ${title}`}
 				className={cn("shadow-small custom-img", {
 					"hover:shadow-medium transition-shadow duration-300": slug,
 				})}
 				src={imageBuilder(imageObject).url()}
+			/> */}
+			<img
+				alt={`Cover Image for ${title}`}
+				src={imageBuilder(imageObject).url()}
 			/>
 		</Container>
 	);
 
 	return (
-		<div
-			className={cn(
-				`shadow-small -mx-5 sm:mx-0 ${
-					isPostPage ? "null" : "lg:max-h-[17.5rem]"
-				}`,
-				{
-					"hover:shadow-medium transition-shadow duration-300": slug,
-				}
-			)}
-			style={{
-				// maxHeight: isPostPage ? " none" : isGrid,
-				overflow: "hidden",
-				// minWidth: "477px",
-			}}
-		>
+		<div>
 			{slug ? (
 				<Link as={`/posts/${slug}`} href="/posts/[slug]">
 					<a aria-label={title}>{image}</a>

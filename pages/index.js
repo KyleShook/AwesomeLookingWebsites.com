@@ -10,11 +10,13 @@ import EdibleSpecies from "../components/pagination";
 
 import ReactDOM from "react-dom";
 import { useState, useEffect } from "react";
+import Listings from "../components/Listings";
 
 export default function Index({ allPosts, preview }) {
 	// console.log(allPosts);
 	const heroPost = allPosts[0];
 	const morePosts = allPosts.slice(1);
+
 	return (
 		<>
 			<Layout preview={preview}>
@@ -23,7 +25,8 @@ export default function Index({ allPosts, preview }) {
 				</Head>
 				<Container>
 					<Intro />
-					<EdibleSpecies />
+
+					<Listings />
 					{/* {heroPost && (
 						<HeroPost
 							title={heroPost.title}
