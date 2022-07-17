@@ -8,6 +8,7 @@ import {
 	InfoContainer,
 	ListTitle,
 	BottomContainer,
+	MobileListTitle,
 } from "./list-preview.styled";
 export default function ListPreview({
 	title,
@@ -21,6 +22,12 @@ export default function ListPreview({
 }) {
 	return (
 		<ListingContainer>
+			<MobileListTitle className="text-4xl mb-3 fb">
+				{title}
+				{/* <Link as={`/posts/${slug}`} href="/posts/[slug]">
+					<a className="hover:underline">{title}</a>
+				</Link> */}
+			</MobileListTitle>
 			<div>
 				<ListImage
 					slug={slug}
@@ -32,17 +39,13 @@ export default function ListPreview({
 			</div>
 			<InfoContainer>
 				<ListTitle className="text-4xl mb-3 fb">
+					{title}
 					<Link as={`/posts/${slug}`} href="/posts/[slug]">
 						<a className="hover:underline">{title}</a>
 					</Link>
 				</ListTitle>
 				<BottomContainer>
-					<a
-						style={{ fontSize: "30px" }}
-						href={websiteURL}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<a href={websiteURL} target="_blank" rel="noopener noreferrer">
 						View Website↗
 					</a>
 					<Date dateString={date} />

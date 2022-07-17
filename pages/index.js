@@ -25,7 +25,7 @@ export default function Index({ allPosts, preview }) {
 				</Head>
 				<Container>
 					<Intro />
-					{/* <EdibleSpecies /> */}
+
 					<Listings />
 					{/* {heroPost && (
 						<HeroPost

@@ -10,8 +10,29 @@ const Container = styled.div`
 		width: 100%;
 		max-width: 600px;
 		min-width: 600px;
+		transition: 0.5s;
 		/* mix-blend-mode: difference;
 		filter: invert(1); */
+	}
+
+	@media (max-width: 1280px) {
+		img {
+			max-width: 400px;
+			min-width: 400px;
+		}
+	}
+	@media (max-width: 1100px) {
+		img {
+			max-width: 300px;
+			min-width: 300px;
+		}
+	}
+
+	@media (max-width: 650px) {
+		img {
+			max-width: 600px;
+			min-width: 300px;
+		}
 	}
 `;
 

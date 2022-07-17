@@ -13,6 +13,17 @@ export const PreTitle = styled.span`
 	font-weight: 900;
 	/* text-transform: uppercase; */
 	line-height: 1;
+	transition: font-size 0.3s;
+
+	@media (max-width: 1260px) {
+		font-size: 75px;
+	}
+	@media (max-width: 1000px) {
+		font-size: 55px;
+	}
+	@media (max-width: 675px) {
+		max-width: 325px;
+	}
 `;
 
 export const Title = styled.h1`
@@ -20,6 +31,17 @@ export const Title = styled.h1`
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
+	transition: font-size 0.3s;
+
+	@media (max-width: 1260px) {
+		font-size: 150px;
+	}
+	@media (max-width: 1000px) {
+		font-size: 100px;
+	}
+	@media (max-width: 675px) {
+		font-size: 55px;
+	}
 `;
 
 export const Eyes = styled.span`
@@ -28,6 +50,18 @@ export const Eyes = styled.span`
 	text-transform: uppercase;
 	line-height: 1;
 	display: none;
+	transition: font-size 0.3s;
+
+	@media (max-width: 1260px) {
+		font-size: 150px;
+	}
+
+	@media (max-width: 1000px) {
+		font-size: 100px;
+	}
+	@media (max-width: 675px) {
+		font-size: 55px;
+	}
 `;
 
 export const Letters = styled.span`
@@ -35,6 +69,18 @@ export const Letters = styled.span`
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
+	transition: font-size 0.3s;
+
+	@media (max-width: 1260px) {
+		font-size: 150px;
+	}
+
+	@media (max-width: 1000px) {
+		font-size: 100px;
+	}
+	@media (max-width: 675px) {
+		font-size: 55px;
+	}
 `;
 
 export const TitleRight = styled.h1`
@@ -43,6 +89,19 @@ export const TitleRight = styled.h1`
 	text-transform: uppercase;
 	line-height: 1;
 	text-align: right;
+	transition: 0.3s;
+
+	@media (max-width: 1260px) {
+		font-size: 150px;
+	}
+
+	@media (max-width: 1000px) {
+		font-size: 100px;
+		text-align: left;
+	}
+	@media (max-width: 675px) {
+		font-size: 55px;
+	}
 
 	&:hover ${Eyes} {
 		display: initial;
