@@ -26,13 +26,6 @@ export const IntroContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 	transition: font-weight 0.3s;
-
-	/* &:hover {
-		h1,
-		h1 > span {
-			animation: ${fontAnimation} 5s 10;
-		}
-	} */
 `;
 export const PreTitle = styled.span`
 	text-transform: none;
@@ -63,7 +56,6 @@ export const Title = styled.h1`
 	transition: 0.5s;
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
-	/* background: red; */
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
@@ -76,14 +68,15 @@ export const Title = styled.h1`
 	}
 `;
 
-export const Eyes = styled.span`
-	font-size: 200px;
+export const Emoji = styled.span`
+	font-size: 170px;
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
 	display: none;
 	transition: 0.3s;
 	cursor: pointer;
+	letter-spacing: -15px;
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
@@ -125,7 +118,6 @@ export const TitleRight = styled.h1`
 	transition: 0.5s;
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
-	/* background: red; */
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
@@ -139,7 +131,7 @@ export const TitleRight = styled.h1`
 		font-size: 55px;
 	}
 
-	&:hover ${Eyes} {
+	&:hover ${Emoji} {
 		display: initial;
 	}
 	&:hover ${Letters} {

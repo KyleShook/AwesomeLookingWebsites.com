@@ -5,10 +5,6 @@ import { useRouter } from "next/router";
 import { Container, Wrapper } from "./pagination.styled";
 import Head from "next/head";
 import PaginationControls from "./PaginationControls";
-import { getCookie, setCookies, removeCookies, hasCookie } from "cookies-next";
-
-// const getPageNumber = getCookie("PageNumber");
-// console.log(getPageNumber);
 
 const Listings = ({ posts }) => {
 	const [species, setSpecies] = useState();
@@ -114,17 +110,18 @@ const Listings = ({ posts }) => {
 	};
 
 	return (
-		<Container>
+		<Container id={"next"} style={{ paddingTop: "30px", marginTop: "-30px" }}>
 			{/* <Head>
 				<title>Page {pageNum}</title>
 			</Head> */}
-			<Wrapper>
+			<Wrapper id={"prev"} style={{ paddingTop: "30px", marginTop: "-30px" }}>
 				<PaginationControls
 					prevClick={prevClick}
 					nextClick={nextClick}
 					pageNum={pageNum}
 					species={species}
 					totalPosts={totalPosts}
+					anchor
 				/>
 
 				<div>
@@ -143,6 +140,7 @@ const Listings = ({ posts }) => {
 							/>
 						))}
 				</div>
+
 				<PaginationControls
 					prevClick={prevClick}
 					nextClick={nextClick}

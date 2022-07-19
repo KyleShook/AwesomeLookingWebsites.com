@@ -4,15 +4,15 @@ import {
 	IntroContainer,
 	Title,
 	TitleRight,
-	Eyes,
+	Emoji,
 	PreTitle,
 	Letters,
 	TitleContainer,
 } from "./intro.styled";
-// import { useRef, useEffect } from "react";
 
 export default function Intro() {
 	const [bgColor, setBgColor] = useState("");
+	const [emojiPair, setEmojiPair] = useState("👀");
 
 	const bgColors = [
 		"#ffaeaeb3",
@@ -22,30 +22,34 @@ export default function Intro() {
 		"orange",
 		"black",
 		"antiquewhite",
-		// "deeppink",
 		"transparent",
 	];
+
+	const emojis = ["👀", "👻👻", "🔥🔥", "💖💖", "🤯🤯", "👏👏"];
 
 	const getRandomBgColor = () => {
 		if (bgColors[Math.floor(Math.random() * bgColors.length)] !== bgColor) {
 			setBgColor(bgColors[Math.floor(Math.random() * bgColors.length)]);
 		}
 	};
+	const getRandomEmoji = () => {
+		if (emojis[Math.floor(Math.random() * emojis.length)] !== emojiPair) {
+			setEmojiPair(emojis[Math.floor(Math.random() * emojis.length)]);
+		}
+	};
+	const emojiClick = () => {
+		getRandomEmoji();
+		getRandomBgColor();
+	};
 
 	return (
 		<IntroContainer className="flex-col md:flex-row flex mt-16 mb-16 md:mb-12 justify-end">
-			{/* <Title
-			// className="text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:pr-8"
-			>
-				<span>We think these are</span>
-				<br />
-				awesome looking websites.
-			</Title> */}
 			<PreTitle>We think these are</PreTitle>
 			<TitleContainer>
 				<Title bgColor={bgColor}>awesome</Title>
 				<TitleRight bgColor={bgColor}>
-					l<Eyes onClick={getRandomBgColor}>👀</Eyes>
+					l<Emoji onClick={emojiClick}>{emojiPair}</Emoji>
+					{/* <Emoji onClick={getRandomBgColor}>👀🔥👻🤯🥺🧐💎❤️💖🌐</Emoji> */}
 					<Letters>oo</Letters>king
 				</TitleRight>
 				<Title bgColor={bgColor}>websites.</Title>

@@ -1,7 +1,7 @@
 import { Previous, Next } from "./PaginationControls.styled";
 
 const PaginationControls = (props) => {
-	const { pageNum, nextClick, prevClick, totalPosts } = props;
+	const { pageNum, nextClick, prevClick, totalPosts, anchor } = props;
 
 	const count = pageNum * 10;
 
@@ -13,9 +13,10 @@ const PaginationControls = (props) => {
 		<div className="mb-3 justify-between flex">
 			<Previous
 				pageNum={pageNum}
-				disabled={pageNum === 1}
+				disabled={pageNum <= 1}
 				onClick={prevClick}
-				style={{ textDecoration: pageNum === 1 ? "line-through" : "none" }}
+				style={{ textDecoration: pageNum <= 1 ? "line-through" : "none" }}
+				href={"#prev"}
 			>
 				Previous
 			</Previous>
@@ -26,6 +27,7 @@ const PaginationControls = (props) => {
 				Page {pageNum} of {totalPages}
 			</p>
 			<Next
+				href={"#next"}
 				lastPage={lastPage}
 				onClick={nextClick}
 				disabled={lastPage}
