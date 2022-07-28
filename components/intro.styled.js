@@ -22,10 +22,15 @@ import styled, { keyframes } from "styled-components";
 // `;
 
 export const IntroContainer = styled.section`
-	height: calc(100vh - 164px);
+	/* height: calc(100vh - 164px);
+	height: calc(100vh - 164px); */
 	display: flex;
 	flex-direction: column;
 	transition: font-weight 0.3s;
+
+	@media (max-width: 1000px) {
+		align-items: center;
+	}
 `;
 export const PreTitle = styled.span`
 	text-transform: none;

@@ -6,16 +6,43 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 
 const Container = styled.div`
-	img {
+	width: 100%;
+	max-width: 800px;
+	min-width: 300px;
+	transition: 0.5s;
+
+	* {
+		width: 100%;
+		max-width: 800px;
+		min-width: 300px;
+		transition: 0.5s;
+	}
+	/* .custom-img {
 		width: 100%;
 		max-width: 600px;
 		min-width: 600px;
 		transition: 0.5s;
 		/* mix-blend-mode: difference;
-		filter: invert(1); */
+		filter: invert(1); 
+	} */
+
+	/* .custom-img {
+		object-fit: contain;
+		width: 100% !important;
+		position: relative !important;
+		height: unset !important;
+		
+		transition: 0.5s !important;
 	}
 
-	@media (max-width: 1280px) {
+	.unset-img {
+		width: 100%;
+	}
+	.unset-img > div {
+		position: unset !important;
+	} */
+
+	/* @media (max-width: 1280px) {
 		img {
 			max-width: 400px;
 			min-width: 400px;
@@ -33,7 +60,7 @@ const Container = styled.div`
 			max-width: 600px;
 			min-width: 300px;
 		}
-	}
+	} */
 `;
 
 export default function ListImage({
@@ -49,35 +76,32 @@ export default function ListImage({
 
 	const isGrid = toggleGrid === 3 ? "280px" : "430px";
 
-	const image = (
-		<Container>
-			{/* <Image
-				quality={100}
-				width={"300px"}
-				height={"250px"}
-				layout="fill"
-				alt={`Cover Image for ${title}`}
-				className={cn("shadow-small custom-img", {
-					"hover:shadow-medium transition-shadow duration-300": slug,
-				})}
-				src={imageBuilder(imageObject).url()}
-			/> */}
-			<img
-				alt={`Cover Image for ${title}`}
-				src={imageBuilder(imageObject).url()}
-			/>
-		</Container>
-	);
+	// const image = (
+	// 	<Image
+	// 		quality={100}
+	// 		// width="100%"
+	// 		// height="100%"
+	// 		// objectFit="contain"
+	// 		alt={`Cover Image for ${title}`}
+	// 		className={cn("shadow-small custom-img", {
+	// 			"hover:shadow-medium transition-shadow duration-300": slug,
+	// 		})}
+	// 		src={imageBuilder(imageObject).url()}
+	// 	/>
+
+	// 	<img alt={`${title}'s website`} src={imageBuilder(imageObject).url()} />
+	// );
 
 	return (
-		<div>
-			{slug ? (
+		<Container>
+			{/* {slug ? (
 				<Link as={`/posts/${slug}`} href="/posts/[slug]">
 					<a aria-label={title}>{image}</a>
 				</Link>
 			) : (
 				image
-			)}
-		</div>
+			)} */}
+			<img alt={`${title}'s website`} src={imageBuilder(imageObject).url()} />
+		</Container>
 	);
 }

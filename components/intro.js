@@ -12,7 +12,7 @@ import {
 
 export default function Intro() {
 	const [bgColor, setBgColor] = useState("");
-	const [emojiPair, setEmojiPair] = useState("👀");
+	const [emojiPair, setEmojiPair] = useState("🔥🔥");
 
 	const bgColors = [
 		"#ffaeaeb3",
@@ -25,7 +25,7 @@ export default function Intro() {
 		"transparent",
 	];
 
-	const emojis = ["👀", "👻👻", "🔥🔥", "💖💖", "🤯🤯", "👏👏"];
+	const emojis = ["👀", "🤘🤘", "🔥🔥", "💖💖", "🤯🤯", "👏👏"];
 
 	const getRandomBgColor = () => {
 		if (bgColors[Math.floor(Math.random() * bgColors.length)] !== bgColor) {
@@ -43,7 +43,7 @@ export default function Intro() {
 	};
 
 	return (
-		<IntroContainer className="flex-col md:flex-row flex mt-16 mb-16 md:mb-12 justify-end">
+		<IntroContainer className="flex-col md:flex-row flex mt-16 mb-24 justify-end">
 			<PreTitle>We think these are</PreTitle>
 			<TitleContainer>
 				<Title bgColor={bgColor}>awesome</Title>

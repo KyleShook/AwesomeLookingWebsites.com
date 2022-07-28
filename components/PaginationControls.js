@@ -1,16 +1,16 @@
-import { Previous, Next } from "./PaginationControls.styled";
+import { Previous, Next, Container } from "./PaginationControls.styled";
 
 const PaginationControls = (props) => {
 	const { pageNum, nextClick, prevClick, totalPosts, anchor } = props;
 
-	const count = pageNum * 10;
+	const count = pageNum * 6;
 
-	const totalPages = Math.ceil(totalPosts / 10);
+	const totalPages = Math.ceil(totalPosts / 6);
 
 	const lastPage = count >= totalPosts;
 
 	return (
-		<div className="mb-3 justify-between flex">
+		<Container className="mb-3 justify-between flex">
 			<Previous
 				pageNum={pageNum}
 				disabled={pageNum <= 1}
@@ -37,7 +37,7 @@ const PaginationControls = (props) => {
 			>
 				Next
 			</Next>
-		</div>
+		</Container>
 	);
 };
 

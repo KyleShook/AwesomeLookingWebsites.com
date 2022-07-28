@@ -8,6 +8,16 @@ export const Previous = styled.a`
 	width: 25%;
 	mix-blend-mode: difference;
 	font-size: 24px;
+	padding-left: 8px;
+
+	border: 4px solid transparent;
+	border-bottom: none;
+	border-left: none;
+	transition: border 0.3s;
+
+	&:hover {
+		border-color: black;
+	}
 `;
 
 export const Next = styled.a`
@@ -18,4 +28,21 @@ export const Next = styled.a`
 	width: 25%;
 	mix-blend-mode: difference;
 	font-size: 24px;
+	border: 4px solid transparent;
+	border-bottom: none;
+	border-right: none;
+	transition: border 0.3s;
+	padding-right: 8px;
+
+	&:hover {
+		border-color: black;
+	}
+`;
+
+export const Container = styled.div`
+	width: 100%;
+	@media (max-width: 1000px) {
+		max-width: 800px;
+		margin: auto auto 20px;
+	}
 `;

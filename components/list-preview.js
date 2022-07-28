@@ -22,12 +22,7 @@ export default function ListPreview({
 }) {
 	return (
 		<ListingContainer>
-			<MobileListTitle className="mb-3 fb">
-				{title}
-				{/* <Link as={`/posts/${slug}`} href="/posts/[slug]">
-					<a className="hover:underline">{title}</a>
-				</Link> */}
-			</MobileListTitle>
+			{/* <MobileListTitle className="mb-3 fb">{title}</MobileListTitle> */}
 			<div>
 				<ListImage
 					slug={slug}
@@ -51,7 +46,7 @@ export default function ListPreview({
 					<Date dateString={date} />
 				</BottomContainer>
 			</InfoContainer>
-			<p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+			{/* <p className="text-lg leading-relaxed mb-4">{excerpt}</p> */}
 		</ListingContainer>
 	);
 }

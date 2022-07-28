@@ -8,28 +8,38 @@ export const ListingContainer = styled.div`
 
 	border-top: 4px solid black;
 	padding: 20px 0;
+	z-index: 10;
 
 	&:last-child {
 		border-bottom: 4px solid black;
-		margin-bottom: 1rem;
+		margin-bottom: 20px;
 	}
 
-	@media (max-width: 650px) {
+	@media (max-width: 1000px) {
 		flex-direction: column;
+		max-width: 800px;
+		margin: auto;
 	}
 `;
 
 export const InfoContainer = styled.div`
-	padding: 0 0 0 20px;
+	padding: 0 20px;
+	margin-top: -6px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	/* width: 100%; */
 	flex-grow: 1;
 
-	@media (max-width: 650px) {
-		padding: 0;
-		/* flex-direction: row; */
+	@media (max-width: 1000px) {
+		padding: 20px 0;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	@media (max-width: 500px) {
+		padding: 20px 0 0;
+		flex-direction: column;
 	}
 `;
 
@@ -42,27 +52,20 @@ export const ListTitle = styled.h3`
 	@media (max-width: 1275px) {
 		font-size: 50px;
 	}
-
-	@media (max-width: 650px) {
-		display: none;
-		line-height: initial;
-
-		/* a {
-			text-decoration: underline;
-		} */
+	@media (max-width: 500px) {
+		text-align: center;
 	}
 `;
 
 export const BottomContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
 	margin-bottom: -6px;
 
 	font-size: 30px;
 
-	@media (max-width: 1100px) {
-		font-size: 25px;
+	@media (min-width: 1000px) {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 	@media (max-width: 650px) {
 		/* flex-direction: column; */
@@ -75,6 +78,12 @@ export const BottomContainer = styled.div`
 
 	@media (max-width: 400px) {
 		font-size: 20px;
+	}
+
+	@media (max-width: 1000px) {
+		time {
+			display: none;
+		}
 	}
 
 	a:hover {

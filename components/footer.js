@@ -7,11 +7,12 @@ export default function Footer() {
 			<Container>
 				<Link href="/">
 					{/* <a className="hover:underline">👀 alw</a> */}
-					<a className="font-bold underline underline-offset-2">
+					<a className="font-bold underline hover:no-underline underline-offset-2">
 						AWESOME LOOKING WEBSITES
 					</a>
 				</Link>
-				<br />v 1.0.0
+				{/* <br />
+				2022 */}
 			</Container>
 		</footer>
 	);
