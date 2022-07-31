@@ -1,3 +1,5 @@
 {
-    "rewrites": [{ "source": "/studio/(.*)", "destination": "/studio/index.html" }]
+	"rewrites": [
+		{ "source": "/alw-hq/(.*)", "destination": "/alw-hq/index.html" }
+	]
 }
