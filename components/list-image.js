@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 const Container = styled.div`
 	width: 100%;
-	max-width: 800px;
+	max-width: 700px;
 	min-width: 300px;
 	transition: 0.5s;
 

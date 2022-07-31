@@ -58,8 +58,8 @@ const Listings = ({ posts }) => {
 			`
       *[_type == "post"] | order(publishedAt desc){
         ${postFields}
-      }[0..6]
-      [(($pageNum - 1) * 6)...($pageNum * 6)]
+      }[0..8]
+      [(($pageNum - 1) * 8)...($pageNum * 8)]
     `,
 
 			{

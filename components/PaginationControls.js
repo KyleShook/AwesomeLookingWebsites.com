@@ -3,9 +3,9 @@ import { Previous, Next, Container } from "./PaginationControls.styled";
 const PaginationControls = (props) => {
 	const { pageNum, nextClick, prevClick, totalPosts, anchor } = props;
 
-	const count = pageNum * 6;
+	const count = pageNum * 8;
 
-	const totalPages = Math.ceil(totalPosts / 6);
+	const totalPages = Math.ceil(totalPosts / 8);
 
 	const lastPage = count >= totalPosts;
 

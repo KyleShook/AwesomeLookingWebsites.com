@@ -17,7 +17,7 @@ export const ListingContainer = styled.div`
 
 	@media (max-width: 1000px) {
 		flex-direction: column;
-		max-width: 800px;
+		max-width: 700px;
 		margin: auto;
 	}
 `;
@@ -60,7 +60,7 @@ export const ListTitle = styled.h3`
 export const BottomContainer = styled.div`
 	margin-bottom: -6px;
 
-	font-size: 30px;
+	font-size: 25px;
 
 	@media (min-width: 1000px) {
 		display: flex;
