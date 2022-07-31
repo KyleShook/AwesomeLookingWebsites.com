@@ -24,7 +24,10 @@ function MyApp({ Component, pageProps }) {
 					property="og:description"
 					content="A collection of awesome looking websites."
 				/>
-				<meta property="og:image" content="/images/social.png" />
+				<meta
+					property="og:image"
+					content="https://www.awesomelookingwebsites.com/images/social.png"
+				/>
 
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta property="twitter:domain" content="awesomelookingwebsites.com" />
@@ -37,7 +40,10 @@ function MyApp({ Component, pageProps }) {
 					name="twitter:description"
 					content="A collection of awesome looking websites."
 				/>
-				<meta name="twitter:image" content="/images/social.png" />
+				<meta
+					name="twitter:image"
+					content="https://www.awesomelookingwebsites.com/images/social.png"
+				/>
 			</Head>
 			<HeaderContainer>
 				<Header />
