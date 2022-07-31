@@ -38,10 +38,11 @@ export const PreTitle = styled.span`
 	-webkit-text-stroke: 2px black;
 	font-weight: 900;
 	line-height: 1;
-	transition: font-size 0.3s;
+	/* transition: font-size 0.3s; */
 
 	@media (max-width: 1260px) {
 		font-size: 75px;
+		transition: font-size 0.5s;
 	}
 	@media (max-width: 1000px) {
 		font-size: 55px;
@@ -57,12 +58,13 @@ export const Title = styled.h1`
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
-	transition: font-size 0.5s;
+	/* transition: font-size 0.5s; */
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
+		transition: font-size 0.5s;
 	}
 	@media (max-width: 1000px) {
 		font-size: 100px;
@@ -78,12 +80,13 @@ export const Emoji = styled.span`
 	text-transform: uppercase;
 	line-height: 1;
 	display: none;
-	transition: font-size 0.3s;
+	/* transition: font-size 0.3s; */
 	cursor: pointer;
 	letter-spacing: -15px;
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
+		transition: font-size 0.5s;
 	}
 
 	@media (max-width: 1000px) {
@@ -99,10 +102,11 @@ export const Letters = styled.span`
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
-	transition: font-size 0.3s;
+	/* transition: font-size 0.3s; */
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
+		transition: font-size 0.5s;
 	}
 
 	@media (max-width: 1000px) {
@@ -119,12 +123,13 @@ export const TitleRight = styled.h1`
 	text-transform: uppercase;
 	line-height: 1.3;
 	text-align: right;
-	transition: font-size 0.5s;
+	/* transition: font-size 0.5s; */
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
+		transition: font-size 0.5s;
 	}
 
 	@media (max-width: 1000px) {
