@@ -26,7 +26,6 @@ export const IntroContainer = styled.section`
 	height: calc(100vh - 164px); */
 	display: flex;
 	flex-direction: column;
-	transition: font-weight 0.3s;
 
 	@media (max-width: 1000px) {
 		align-items: center;
@@ -58,7 +57,7 @@ export const Title = styled.h1`
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
-	transition: 0.5s;
+	transition: font-size 0.5s;
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
 
@@ -79,7 +78,7 @@ export const Emoji = styled.span`
 	text-transform: uppercase;
 	line-height: 1;
 	display: none;
-	transition: 0.3s;
+	transition: font-size 0.3s;
 	cursor: pointer;
 	letter-spacing: -15px;
 
@@ -120,7 +119,7 @@ export const TitleRight = styled.h1`
 	text-transform: uppercase;
 	line-height: 1.3;
 	text-align: right;
-	transition: 0.5s;
+	transition: font-size 0.5s;
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
 
