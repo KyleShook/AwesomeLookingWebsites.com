@@ -6,7 +6,7 @@
 	},
 	"project": {
 		"name": "ALW HQ",
-		"basePath": "/alw-hq"
+		"basePath": "/studio"
 	},
 	"plugins": [
 		"@sanity/base",
