@@ -7,15 +7,23 @@ import { useRouter } from "next/router";
 
 const Container = styled.div`
 	width: 100%;
-	max-width: 700px;
+	max-width: 400px;
 	min-width: 300px;
 	transition: 0.5s;
 
 	* {
 		width: 100%;
-		max-width: 800px;
+		max-width: 400px;
 		min-width: 300px;
 		transition: 0.5s;
+	}
+
+	@media (max-width: 800px) {
+		max-width: none;
+
+		* {
+			max-width: none;
+		}
 	}
 	/* .custom-img {
 		width: 100%;

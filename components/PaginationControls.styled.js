@@ -18,6 +18,9 @@ export const Previous = styled.a`
 	&:hover {
 		border-color: black;
 	}
+	@media (max-width: 500px) {
+		font-size: 20px;
+	}
 `;
 
 export const Next = styled.a`
@@ -37,6 +40,10 @@ export const Next = styled.a`
 	&:hover {
 		border-color: black;
 	}
+
+	@media (max-width: 500px) {
+		font-size: 20px;
+	}
 `;
 
 export const Container = styled.div`
@@ -44,5 +51,12 @@ export const Container = styled.div`
 	@media (max-width: 1000px) {
 		max-width: 800px;
 		margin: auto auto 20px;
+	}
+`;
+export const PageNumber = styled.p`
+	font-size: 24px;
+
+	@media (max-width: 500px) {
+		font-size: 20px;
 	}
 `;

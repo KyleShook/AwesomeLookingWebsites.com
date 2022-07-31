@@ -36,8 +36,8 @@ const EdibleSpecies = () => {
 			`
       *[_type == "post"] | order(publishedAt desc){
         ${postFields}
-      }[0..8]
-      [(($pageNum - 1) *8)...($pageNum * 8)]
+      }[0..10]
+      [(($pageNum - 1) *10)...($pageNum * 10)]
     `,
 			{
 				// The only thing we're changing is the pageNum param

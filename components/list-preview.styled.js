@@ -15,10 +15,11 @@ export const ListingContainer = styled.div`
 		margin-bottom: 20px;
 	}
 
-	@media (max-width: 1000px) {
+	@media (max-width: 800px) {
 		flex-direction: column;
-		max-width: 700px;
+		/* max-width: 700px; */
 		margin: auto;
+		align-items: center;
 	}
 `;
 
@@ -31,9 +32,7 @@ export const InfoContainer = styled.div`
 	/* width: 100%; */
 	flex-grow: 1;
 
-	@media (max-width: 1000px) {
-		padding: 20px 0;
-		flex-direction: row;
+	@media (max-width: 800px) {
 		align-items: center;
 	}
 
@@ -52,6 +51,9 @@ export const ListTitle = styled.h3`
 	@media (max-width: 1275px) {
 		font-size: 50px;
 	}
+	@media (max-width: 800px) {
+		margin-top: 16px;
+	}
 	@media (max-width: 500px) {
 		text-align: center;
 	}
@@ -67,7 +69,7 @@ export const BottomContainer = styled.div`
 		justify-content: space-between;
 		width: 100%;
 	}
-	@media (max-width: 650px) {
+	@media (max-width: 800px) {
 		/* flex-direction: column; */
 		margin-top: 12px;
 

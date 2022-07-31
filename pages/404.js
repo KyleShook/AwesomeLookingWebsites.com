@@ -53,7 +53,7 @@ export default function Custom404() {
 		<Container>
 			<Text>TOTALLY NOT AWESOME</Text>
 			<Link href="/">
-				<Home>Let's go home.</Home>
+				<Home href="/">Let's go home.</Home>
 			</Link>
 		</Container>
 	);

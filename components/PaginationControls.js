@@ -1,11 +1,16 @@
-import { Previous, Next, Container } from "./PaginationControls.styled";
+import {
+	Previous,
+	Next,
+	Container,
+	PageNumber,
+} from "./PaginationControls.styled";
 
 const PaginationControls = (props) => {
 	const { pageNum, nextClick, prevClick, totalPosts, anchor } = props;
 
-	const count = pageNum * 8;
+	const count = pageNum * 10;
 
-	const totalPages = Math.ceil(totalPosts / 8);
+	const totalPages = Math.ceil(totalPosts / 10);
 
 	const lastPage = count >= totalPosts;
 
@@ -23,9 +28,9 @@ const PaginationControls = (props) => {
 			{/* <button style={{ marginLeft: " 36px" }} onClick={swap}>
                         Grid
                     </button> */}
-			<p style={{ fontSize: "24px" }}>
+			<PageNumber>
 				Page {pageNum} of {totalPages}
-			</p>
+			</PageNumber>
 			<Next
 				href={"#next"}
 				lastPage={lastPage}
