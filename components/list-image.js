@@ -109,7 +109,18 @@ export default function ListImage({
 			) : (
 				image
 			)} */}
-			<img alt={`${title}'s website`} src={imageBuilder(imageObject).url()} />
+			<Image
+				quality={100}
+				width={400}
+				height={245}
+				layout="intrinsic"
+				alt={`Cover Image for ${title}`}
+				className={cn("shadow-small custom-img", {
+					"hover:shadow-medium transition-shadow duration-300": slug,
+				})}
+				src={imageBuilder(imageObject).url()}
+			/>
+			{/* <img alt={`${title}'s website`} src={imageBuilder(imageObject).url()} /> */}
 		</Container>
 	);
 }
