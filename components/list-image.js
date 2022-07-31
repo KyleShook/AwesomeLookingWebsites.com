@@ -18,6 +18,11 @@ const Container = styled.div`
 		transition: 0.5s;
 	}
 
+	img {
+		object-fit: cover !important;
+		object-position: center top !important;
+	}
+
 	@media (max-width: 800px) {
 		max-width: none;
 
