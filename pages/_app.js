@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 
 				<meta
 					name="description"
-					content="A collection of awesome looking websites."
+					content="Showcasing awesome looking websites from all over the internet."
 				/>
 
 				<meta
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
 				<meta property="og:title" content="Awesome Looking Websites" />
 				<meta
 					property="og:description"
-					content="A collection of awesome looking websites."
+					content="Showcasing awesome looking websites from all over the internet."
 				/>
 				<meta
 					property="og:image"
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
 				<meta name="twitter:title" content="Awesome Looking Websites" />
 				<meta
 					name="twitter:description"
-					content="A collection of awesome looking websites."
+					content="Showcasing awesome looking websites from all over the internet."
 				/>
 				<meta
 					name="twitter:image"
