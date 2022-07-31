@@ -11,13 +11,6 @@ const Container = styled.div`
 	min-width: 300px;
 	transition: 0.5s;
 
-	* {
-		width: 100%;
-		max-width: 400px;
-		min-width: 300px;
-		transition: 0.5s;
-	}
-
 	img {
 		object-fit: cover !important;
 		object-position: center top !important;
@@ -25,55 +18,7 @@ const Container = styled.div`
 
 	@media (max-width: 800px) {
 		max-width: none;
-
-		* {
-			max-width: none;
-		}
 	}
-	/* .custom-img {
-		width: 100%;
-		max-width: 600px;
-		min-width: 600px;
-		transition: 0.5s;
-		/* mix-blend-mode: difference;
-		filter: invert(1); 
-	} */
-
-	/* .custom-img {
-		object-fit: contain;
-		width: 100% !important;
-		position: relative !important;
-		height: unset !important;
-		
-		transition: 0.5s !important;
-	}
-
-	.unset-img {
-		width: 100%;
-	}
-	.unset-img > div {
-		position: unset !important;
-	} */
-
-	/* @media (max-width: 1280px) {
-		img {
-			max-width: 400px;
-			min-width: 400px;
-		}
-	}
-	@media (max-width: 1100px) {
-		img {
-			max-width: 300px;
-			min-width: 300px;
-		}
-	}
-
-	@media (max-width: 650px) {
-		img {
-			max-width: 600px;
-			min-width: 300px;
-		}
-	} */
 `;
 
 export default function ListImage({
@@ -116,8 +61,8 @@ export default function ListImage({
 			)} */}
 			<Image
 				quality={100}
-				width={400}
-				height={245}
+				width={800}
+				height={500}
 				layout="intrinsic"
 				alt={`Cover Image for ${title}`}
 				className={cn("shadow-small custom-img", {
