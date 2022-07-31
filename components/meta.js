@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
+import Head from "next/head";
+import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 
 export default function Meta() {
-  return (
-    <Head>
-      <link
+	return (
+		<Head>
+			{/* <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon/apple-touch-icon.png"
@@ -31,12 +31,12 @@ export default function Meta() {
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
+      <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
+			{/* <meta
         name="description"
         content={`A statically generated blog example using Next.js and Sanity.io.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
-    </Head>
-  )
+      <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
+		</Head>
+	);
 }
