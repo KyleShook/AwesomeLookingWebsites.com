@@ -71,6 +71,7 @@ export const Title = styled.h1`
 	}
 	@media (max-width: 675px) {
 		font-size: 55px;
+		mix-blend-mode: initial;
 	}
 `;
 
@@ -94,6 +95,7 @@ export const Emoji = styled.span`
 	}
 	@media (max-width: 675px) {
 		font-size: 55px;
+		mix-blend-mode: initial;
 	}
 `;
 
@@ -114,6 +116,7 @@ export const Letters = styled.span`
 	}
 	@media (max-width: 675px) {
 		font-size: 55px;
+		mix-blend-mode: initial;
 	}
 `;
 
@@ -138,6 +141,7 @@ export const TitleRight = styled.h1`
 	}
 	@media (max-width: 675px) {
 		font-size: 55px;
+		mix-blend-mode: initial;
 	}
 
 	&:hover ${Emoji} {
