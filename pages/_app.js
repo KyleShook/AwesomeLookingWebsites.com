@@ -8,6 +8,10 @@ function MyApp({ Component, pageProps }) {
 		<>
 			<Head>
 				<link rel="shortcut icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width" />
+				<meta charset="utf-8"></meta>
+				<meta name="robots" content="index,follow"></meta>
+				<meta name="googlebot" content="index,follow"></meta>
 
 				<meta
 					name="description"
