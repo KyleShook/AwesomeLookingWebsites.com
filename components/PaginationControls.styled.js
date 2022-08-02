@@ -18,6 +18,10 @@ export const Previous = styled.a`
 	&:hover {
 		border-color: black;
 	}
+	@media (max-width: 600px) {
+		mix-blend-mode: initial;
+		background: ${(props) => (props.pageNum <= 1 ? "#ffaeae69" : "#b9ffa6a6")};
+	}
 	@media (max-width: 500px) {
 		font-size: 20px;
 	}
@@ -39,6 +43,11 @@ export const Next = styled.a`
 
 	&:hover {
 		border-color: black;
+	}
+
+	@media (max-width: 600px) {
+		mix-blend-mode: initial;
+		background: ${(props) => (props.lastPage ? "#ffaeae69" : "#b9ffa6a6")};
 	}
 
 	@media (max-width: 500px) {
