@@ -9,6 +9,7 @@ import {
 	Letters,
 	TitleContainer,
 	PostTitle,
+	VisuallyHidden,
 } from "./intro.styled";
 
 export default function Intro() {
@@ -44,20 +45,28 @@ export default function Intro() {
 	};
 
 	return (
-		<IntroContainer className="flex-col md:flex-row flex mt-16 mb-24 justify-end">
-			<PreTitle>Sharing</PreTitle>
-			<TitleContainer>
-				<Title bgColor={bgColor}>awesome</Title>
-				<TitleRight bgColor={bgColor}>
-					l<Emoji onClick={emojiClick}>{emojiPair}</Emoji>
-					{/* <Emoji onClick={getRandomBgColor}>👀🔥👻🤯🥺🧐💎❤️💖🌐</Emoji> */}
-					<Letters>oo</Letters>king
-				</TitleRight>
-				<Title bgColor={bgColor}>websites.</Title>
-			</TitleContainer>
-			<PostTitle>(from all over the internet)</PostTitle>
+		<>
+			<VisuallyHidden>
+				Sharing awesome looking websites from all over the internet.
+			</VisuallyHidden>
+			<IntroContainer
+				aria-hidden="true"
+				className="flex-col md:flex-row flex mt-16 mb-24 justify-end"
+			>
+				<PreTitle>Sharing</PreTitle>
+				<TitleContainer>
+					<Title bgColor={bgColor}>awesome</Title>
+					<TitleRight bgColor={bgColor}>
+						l<Emoji onClick={emojiClick}>{emojiPair}</Emoji>
+						{/* <Emoji onClick={getRandomBgColor}>👀🔥👻🤯🥺🧐💎❤️💖🌐</Emoji> */}
+						<Letters>oo</Letters>king
+					</TitleRight>
+					<Title bgColor={bgColor}>websites.</Title>
+				</TitleContainer>
+				<PostTitle>(from all over the internet)</PostTitle>
 
-			{/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">Pssst!</h4> */}
-		</IntroContainer>
+				{/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">Pssst!</h4> */}
+			</IntroContainer>
+		</>
 	);
 }
