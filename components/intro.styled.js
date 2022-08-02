@@ -27,8 +27,8 @@ export const IntroContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 
-	@media (max-width: 1000px) {
-		align-items: center;
+	@media (max-width: 768px) {
+		/* align-items: center; */
 	}
 `;
 export const PreTitle = styled.span`
@@ -67,11 +67,14 @@ export const Title = styled.h1`
 		transition: font-size 0.5s;
 	}
 	@media (max-width: 1000px) {
-		font-size: 100px;
+		font-size: 130px;
 	}
-	@media (max-width: 675px) {
-		font-size: 55px;
+	@media (max-width: 768px) {
+		font-size: 85px;
 		mix-blend-mode: initial;
+	}
+	@media (max-width: 550px) {
+		font-size: 50px;
 	}
 `;
 
@@ -91,11 +94,14 @@ export const Emoji = styled.span`
 	}
 
 	@media (max-width: 1000px) {
-		font-size: 100px;
+		font-size: 130px;
 	}
-	@media (max-width: 675px) {
-		font-size: 55px;
+	@media (max-width: 768px) {
+		font-size: 85px;
 		mix-blend-mode: initial;
+	}
+	@media (max-width: 550px) {
+		font-size: 50px;
 	}
 `;
 
@@ -112,11 +118,14 @@ export const Letters = styled.span`
 	}
 
 	@media (max-width: 1000px) {
-		font-size: 100px;
+		font-size: 130px;
 	}
-	@media (max-width: 675px) {
-		font-size: 55px;
+	@media (max-width: 768px) {
+		font-size: 85px;
 		mix-blend-mode: initial;
+	}
+	@media (max-width: 550px) {
+		font-size: 50px;
 	}
 `;
 
@@ -136,12 +145,17 @@ export const TitleRight = styled.h1`
 	}
 
 	@media (max-width: 1000px) {
-		font-size: 100px;
-		text-align: left;
+		font-size: 130px;
+		text-align: center;
 	}
-	@media (max-width: 675px) {
-		font-size: 55px;
+	@media (max-width: 768px) {
+		font-size: 85px;
 		mix-blend-mode: initial;
+	}
+
+	@media (max-width: 550px) {
+		text-align: left;
+		font-size: 50px;
 	}
 
 	&:hover ${Emoji} {
@@ -149,5 +163,28 @@ export const TitleRight = styled.h1`
 	}
 	&:hover ${Letters} {
 		display: none;
+	}
+`;
+
+export const PostTitle = styled.span`
+	text-transform: none;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1;
+	/* transition: font-size 0.3s; */
+
+	@media (max-width: 1260px) {
+		font-size: 45px;
+		transition: font-size 0.5s;
+	}
+	@media (max-width: 1000px) {
+		font-size: 35px;
+	}
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
+	@media (max-width: 675px) {
+		max-width: 325px;
+		font-size: 20px;
 	}
 `;

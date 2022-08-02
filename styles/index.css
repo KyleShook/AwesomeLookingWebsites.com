@@ -25,5 +25,9 @@ body {
 	font-family: sans-serif;
 	background-image: url(/images/noisy.png);
 }
+
+nav {
+	margin: 25px auto;
+}
 /* purgecss end ignore */
 @tailwind utilities;

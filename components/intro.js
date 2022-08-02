@@ -8,6 +8,7 @@ import {
 	PreTitle,
 	Letters,
 	TitleContainer,
+	PostTitle,
 } from "./intro.styled";
 
 export default function Intro() {
@@ -44,7 +45,7 @@ export default function Intro() {
 
 	return (
 		<IntroContainer className="flex-col md:flex-row flex mt-16 mb-24 justify-end">
-			<PreTitle>We think these are</PreTitle>
+			<PreTitle>Sharing</PreTitle>
 			<TitleContainer>
 				<Title bgColor={bgColor}>awesome</Title>
 				<TitleRight bgColor={bgColor}>
@@ -54,6 +55,7 @@ export default function Intro() {
 				</TitleRight>
 				<Title bgColor={bgColor}>websites.</Title>
 			</TitleContainer>
+			<PostTitle>(from all over the internet)</PostTitle>
 
 			{/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">Pssst!</h4> */}
 		</IntroContainer>
