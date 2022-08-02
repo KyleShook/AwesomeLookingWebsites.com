@@ -4,6 +4,7 @@
 
 html {
 	scroll-behavior: smooth;
+	background: #ffffff00;
 }
 article a {
 	color: rgb(49, 49, 182);
