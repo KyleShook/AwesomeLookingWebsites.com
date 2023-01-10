@@ -1,28 +1,22 @@
-import Avatar from "./avatar";
 import Date from "./date";
 import ListImage from "./list-image";
-import Link from "next/link";
 import { imageBuilder } from "../lib/sanity";
 import {
 	ListingContainer,
 	InfoContainer,
 	ListTitle,
 	BottomContainer,
-	MobileListTitle,
 } from "./list-preview.styled";
 export default function ListPreview({
 	title,
 	coverImage,
 	date,
-	excerpt,
-	author,
 	slug,
 	websiteURL,
 	toggleGrid,
 }) {
 	return (
 		<ListingContainer>
-			{/* <MobileListTitle className="mb-3 fb">{title}</MobileListTitle> */}
 			<div>
 				<ListImage
 					slug={slug}
@@ -33,12 +27,7 @@ export default function ListPreview({
 				/>
 			</div>
 			<InfoContainer>
-				<ListTitle className="text-4xl mb-3 fb">
-					{title}
-					{/* <Link as={`/posts/${slug}`} href="/posts/[slug]">
-						<a className="hover:underline">{title}</a>
-					</Link> */}
-				</ListTitle>
+				<ListTitle>{title}</ListTitle>
 				<BottomContainer>
 					<a href={websiteURL} target="_blank" rel="noopener noreferrer">
 						View Website↗
@@ -46,7 +35,6 @@ export default function ListPreview({
 					<Date dateString={date} />
 				</BottomContainer>
 			</InfoContainer>
-			{/* <p className="text-lg leading-relaxed mb-4">{excerpt}</p> */}
 		</ListingContainer>
 	);
 }

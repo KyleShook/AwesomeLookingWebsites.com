@@ -19,10 +19,6 @@ const Container = styled.div`
 		position: relative !important;
 		height: unset !important;
 	}
-
-	/* .custom-img:hover {
-		mix-blend-mode: difference;
-	} */
 `;
 
 export default function CoverImage({
@@ -44,9 +40,6 @@ export default function CoverImage({
 				quality={100}
 				layout="fill"
 				alt={`Cover Image for ${title}`}
-				className={cn("shadow-small custom-img", {
-					"hover:shadow-medium transition-shadow duration-300": slug,
-				})}
 				src={imageBuilder(imageObject).url()}
 			/>
 		</Container>
@@ -54,18 +47,8 @@ export default function CoverImage({
 
 	return (
 		<div
-			className={cn(
-				`shadow-small -mx-5 sm:mx-0 ${
-					isPostPage ? "null" : "lg:max-h-[17.5rem]"
-				}`,
-				{
-					"hover:shadow-medium transition-shadow duration-300": slug,
-				}
-			)}
 			style={{
-				// maxHeight: isPostPage ? " none" : isGrid,
 				overflow: "hidden",
-				// minWidth: "477px",
 			}}
 		>
 			{slug ? (

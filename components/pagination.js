@@ -86,16 +86,7 @@ const EdibleSpecies = () => {
 				<title>Page {pageNum}</title>
 			</Head> */}
 			<Wrapper>
-				<div className="mb-12">
-					{/* {pageNum !== 1 && (
-						<button
-							disabled={pageNum === 1}
-							onClick={() => setPageNum(pageNum - 1)}
-							style={{ opacity: pageNum === 1 ? ".5" : "1" }}
-						>
-							⬅ Previous
-						</button>
-					)} */}
+				<div>
 					<button
 						disabled={pageNum === 1}
 						onClick={() => setPageNum(pageNum - 1)}
@@ -104,18 +95,6 @@ const EdibleSpecies = () => {
 						Previous
 					</button>
 
-					{/* {species?.length === 3 && (
-						<button
-							onClick={nextClick}
-							disabled={species?.length <= 2}
-							style={{
-								marginLeft: "12px",
-								opacity: species?.length <= 2 ? ".5" : "1",
-							}}
-						>
-							Next ▶
-						</button>
-					)} */}
 					<button
 						onClick={nextClick}
 						disabled={species?.length <= 2}
@@ -126,18 +105,9 @@ const EdibleSpecies = () => {
 					>
 						Next
 					</button>
-					{/* <button style={{ marginLeft: " 36px" }} onClick={swap}>
-						Swap
-					</button> */}
 				</div>
 
-				<div
-					className={`grid ${
-						toggleGrid === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"
-					} ${
-						toggleGrid === 3 ? "md:grid-cols-2" : "md:grid-cols-1"
-					} md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32 gap-8`}
-				>
+				<div>
 					{species &&
 						species.map((post) => (
 							<PostPreview

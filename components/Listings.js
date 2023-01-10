@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from "react";
 import client from "../lib/sanity";
-import ListPreview from "./list-preview";
 import { useRouter } from "next/router";
 import { Container, Wrapper } from "./pagination.styled";
-import Head from "next/head";
 import PaginationControls from "./PaginationControls";
+import { ImageContainer, Card } from "@components";
+import { Toggle, ToggleContainer, TotalCount } from "./Listings.styled ";
 
 const Listings = ({ posts }) => {
 	const [species, setSpecies] = useState();
 	const [totalPosts, setTotalPosts] = useState([]);
 
 	const [pageNum, setPageNum] = useState(1);
-
-	const [toggleGrid, setToggleGrid] = useState(3);
 	const router = useRouter();
 
-	// const swap = () => {
-	// 	if (toggleGrid !== 2) {
-	// 		setToggleGrid(2);
-	// 	} else {
-	// 		setToggleGrid(3);
-	// 	}
-	// };
+	const [grid, setGrid] = useState(false);
+
+	const toggleGrid = () => {
+		if (!grid) {
+			setGrid(true);
+		} else {
+			setGrid(false);
+		}
+	};
 
 	async function fetchIds(posts) {
 		const postFields = `
@@ -110,36 +110,40 @@ const Listings = ({ posts }) => {
 	};
 
 	return (
-		<Container id={"next"} style={{ paddingTop: "30px", marginTop: "-30px" }}>
-			{/* <Head>
-				<title>Page {pageNum}</title>
-			</Head> */}
-			<Wrapper id={"prev"} style={{ paddingTop: "30px", marginTop: "-30px" }}>
-				<PaginationControls
+		<Container id="top" style={{ paddingTop: "30px" }}>
+			<ToggleContainer>
+				<Toggle onClick={toggleGrid}>
+					{grid ? (
+						<img src="/icons/bxs-rectangle.svg" alt="" />
+					) : (
+						<img src="/icons/bxs-grid.svg" alt="" />
+					)}
+				</Toggle>
+			</ToggleContainer>
+			<Wrapper style={{ paddingTop: "30px" }}>
+				{/* <PaginationControls
 					prevClick={prevClick}
 					nextClick={nextClick}
 					pageNum={pageNum}
 					species={species}
 					totalPosts={totalPosts}
-					anchor
-				/>
-
-				<div>
+				/> */}
+				{totalPosts && <TotalCount> Current count: {totalPosts} </TotalCount>}
+				<ImageContainer grid={grid}>
 					{species &&
 						species.map((post) => (
-							<ListPreview
-								key={post.slug}
-								title={post.title}
-								coverImage={post.coverImage}
-								date={post.date}
-								author={post.author}
-								slug={post.slug}
-								excerpt={post.excerpt}
-								toggleGrid={toggleGrid}
-								websiteURL={post.url}
-							/>
+							<>
+								<Card
+									key={post.slug}
+									title={post.title}
+									coverImage={post.coverImage}
+									slug={post.slug}
+									toggleGrid={grid}
+									websiteURL={post.url}
+								/>
+							</>
 						))}
-				</div>
+				</ImageContainer>
 
 				<PaginationControls
 					prevClick={prevClick}
@@ -147,6 +151,8 @@ const Listings = ({ posts }) => {
 					pageNum={pageNum}
 					species={species}
 					totalPosts={totalPosts}
+					style={{ marginTop: "20px" }}
+					anchor
 				/>
 			</Wrapper>
 		</Container>

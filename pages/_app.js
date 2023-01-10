@@ -1,6 +1,7 @@
-import Header from "../components/header";
-import HeaderContainer from "../components/headerContainer";
-import "../styles/index.css";
+import { GlobalStyle } from "../styles/global.styled";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../styles/theme.styled.js";
+import { Footer, Header } from "@components";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -54,11 +55,14 @@ function MyApp({ Component, pageProps }) {
 					src="https://plausible.io/js/plausible.js"
 				></script>
 			</Head>
-			<HeaderContainer>
+			<ThemeProvider theme={theme}>
+				<GlobalStyle />
 				<Header />
-			</HeaderContainer>
-
-			<Component {...pageProps} />
+				<main>
+					<Component {...pageProps} />
+				</main>
+				<Footer />
+			</ThemeProvider>
 		</>
 	);
 }

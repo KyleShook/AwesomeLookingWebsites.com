@@ -33,6 +33,7 @@ export default function Custom404() {
 		text-decoration: underline;
 		cursor: pointer;
 		transition: background 0.3s;
+		color: black;
 
 		:hover {
 			background: #b9ffa6d4;
