@@ -1,24 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	position: relative;
-	/* height: 0; */
-	/* Formula is: (height / width * 100%) */
-	/* padding-top: calc(1496 / 409 * 100%); */
-	/* width: 100%; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-	button {
-		font-size: 24px;
-		font-weight: 500;
+	@media (max-width: 1100px) {
+		justify-content: center;
 	}
 `;
-export const Wrapper = styled.div`
-	/* position: absolute;
-	top: 0;
-	left: 0;
-	max-width: 100%;
-	height: auto; */
-`;
+
 export const ToggleContainer = styled.div`
 	text-align: center;
 	position: fixed;

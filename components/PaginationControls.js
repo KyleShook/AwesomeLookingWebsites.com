@@ -15,24 +15,22 @@ const PaginationControls = (props) => {
 	const lastPage = count >= totalPosts;
 
 	return (
-		<Container className="mb-3 justify-between flex">
+		<Container>
 			<Previous
 				pageNum={pageNum}
 				disabled={pageNum <= 1}
 				onClick={prevClick}
 				style={{ textDecoration: pageNum <= 1 ? "line-through" : "none" }}
-				href={"#prev"}
+				href={anchor ? "#top" : null}
 			>
 				Previous
 			</Previous>
-			{/* <button style={{ marginLeft: " 36px" }} onClick={swap}>
-                        Grid
-                    </button> */}
+
 			<PageNumber>
 				Page {pageNum} of {totalPages}
 			</PageNumber>
 			<Next
-				href={"#next"}
+				href={anchor ? "#top" : null}
 				lastPage={lastPage}
 				onClick={nextClick}
 				disabled={lastPage}
