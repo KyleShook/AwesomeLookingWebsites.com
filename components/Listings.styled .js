@@ -46,6 +46,6 @@ export const Toggle = styled.button`
 	}
 
 	img {
-		width: 36px;
+		width: 48px;
 	}
 `;

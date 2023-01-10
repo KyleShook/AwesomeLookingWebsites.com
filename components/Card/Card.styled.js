@@ -52,19 +52,12 @@ export const CardImageContainer = styled.div`
 	}
 `;
 
-// export const CardImage = styled.img`
-// 	height: auto;
-// 	width: 100%;
-// 	flex-basis: ${(props) => (!props.grid ? " 32.25%" : "100%")};
-// 	display: flex;
-// `;
-
 export const LinkIcon = styled.a`
 	display: flex;
 	align-items: center;
 	color: black;
-	transition: 0.3s;
-	font-size: 12px;
+	transition: color 0.3s;
+	font-size: 14px;
 	text-underline-offset: 2px;
 
 	:hover {
@@ -80,14 +73,15 @@ export const LinkIcon = styled.a`
 export const CardInfo = styled.div`
 	display: flex;
 	flex-wrap: nowrap;
-	align-items: center;
+	align-items: baseline;
 	padding: 8px;
 	border-top: 1px solid black;
-
 	background: white;
+	justify-content: space-between;
 
 	p {
 		font-size: 20px;
 		margin-right: 24px;
+		font-weight: 600;
 	}
 `;

@@ -11,6 +11,7 @@ import {
 const Footer = () => {
 	return (
 		<FooterContainer>
+			{/* No fluff. Just... */}
 			<a href="/">awesome. looking. websites.</a>
 		</FooterContainer>
 	);

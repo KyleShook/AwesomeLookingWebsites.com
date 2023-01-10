@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export const Previous = styled.a`
-	/* background: ${(props) =>
-		props.pageNum <= 1 ? "#ffaeaeb3" : "#b9ffa6d4"}; */
+export const Previous = styled.button`
+	background: none;
 	cursor: pointer;
 	pointer-events: ${(props) => (props.pageNum <= 1 ? "none" : "auto")};
 	text-align: left;
@@ -31,8 +30,8 @@ export const Previous = styled.a`
 	}
 `;
 
-export const Next = styled.a`
-	/* background: ${(props) => (props.lastPage ? "#ffaeaeb3" : "#b9ffa6d4")}; */
+export const Next = styled.button`
+	background: none;
 	pointer-events: ${(props) => (props.lastPage ? "none" : "auto")};
 	cursor: pointer;
 	text-align: right;

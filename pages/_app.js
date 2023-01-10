@@ -1,7 +1,7 @@
 import { GlobalStyle } from "../styles/global.styled";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../styles/theme.styled.js";
-import { Header } from "@components";
+import { Footer, Header } from "@components";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -61,6 +61,7 @@ function MyApp({ Component, pageProps }) {
 				<main>
 					<Component {...pageProps} />
 				</main>
+				<Footer />
 			</ThemeProvider>
 		</>
 	);
