@@ -14,14 +14,16 @@ const PaginationControls = (props) => {
 
 	const lastPage = count >= totalPosts;
 
+	console.log(totalPages);
+
 	return (
 		<Container>
 			<Previous
 				pageNum={pageNum}
-				disabled={pageNum <= 1}
 				onClick={prevClick}
 				style={{ textDecoration: pageNum <= 1 ? "line-through" : "none" }}
-				href={anchor ? "#top" : null}
+				href={pageNum <= 1 ? null : "#top"}
+				as={pageNum <= 1 ? "span" : "a"}
 			>
 				Previous
 			</Previous>
@@ -30,13 +32,13 @@ const PaginationControls = (props) => {
 				Page {pageNum} of {totalPages}
 			</PageNumber>
 			<Next
-				href={anchor ? "#top" : null}
 				lastPage={lastPage}
 				onClick={nextClick}
-				disabled={lastPage}
 				style={{
 					textDecoration: lastPage ? "line-through" : "none",
 				}}
+				href={lastPage ? null : "#top"}
+				as={lastPage ? "span" : "a"}
 			>
 				Next
 			</Next>

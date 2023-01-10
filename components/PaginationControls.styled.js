@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Previous = styled.button`
+export const Previous = styled.a`
 	background: none;
 	cursor: pointer;
 	pointer-events: ${(props) => (props.pageNum <= 1 ? "none" : "auto")};
@@ -14,11 +14,15 @@ export const Previous = styled.button`
 	border: 1px solid black;
 	border-bottom: none;
 	border-left: none;
-	transition: 0.3s;
+	transition: background 0.3s, color 0.3s;
 
 	&:hover {
 		background: black;
 		color: white;
+	}
+
+	&:focus-visible {
+		border: 2px solid black;
 	}
 	@media (max-width: 600px) {
 		mix-blend-mode: initial;
@@ -30,7 +34,7 @@ export const Previous = styled.button`
 	}
 `;
 
-export const Next = styled.button`
+export const Next = styled.a`
 	background: none;
 	pointer-events: ${(props) => (props.lastPage ? "none" : "auto")};
 	cursor: pointer;
@@ -41,13 +45,17 @@ export const Next = styled.button`
 	border: 1px solid black;
 	border-bottom: none;
 	border-right: none;
-	transition: 0.3s;
+	transition: background 0.3s, color 0.3s;
 	color: black;
 	padding: 0 12px;
 
 	&:hover {
 		background: black;
 		color: white;
+	}
+
+	&:focus-visible {
+		border: 2px solid black;
 	}
 
 	@media (max-width: 600px) {

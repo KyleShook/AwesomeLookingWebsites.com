@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { Container, Wrapper } from "./pagination.styled";
 import PaginationControls from "./PaginationControls";
 import { ImageContainer, Card } from "@components";
-import { Toggle, ToggleContainer } from "./Listings.styled ";
+import { Toggle, ToggleContainer, TotalCount } from "./Listings.styled ";
 
 const Listings = ({ posts }) => {
 	const [species, setSpecies] = useState();
@@ -121,14 +121,14 @@ const Listings = ({ posts }) => {
 				</Toggle>
 			</ToggleContainer>
 			<Wrapper style={{ paddingTop: "30px" }}>
-				<PaginationControls
+				{/* <PaginationControls
 					prevClick={prevClick}
 					nextClick={nextClick}
 					pageNum={pageNum}
 					species={species}
 					totalPosts={totalPosts}
-				/>
-
+				/> */}
+				{totalPosts && <TotalCount> Current count: {totalPosts} </TotalCount>}
 				<ImageContainer grid={grid}>
 					{species &&
 						species.map((post) => (

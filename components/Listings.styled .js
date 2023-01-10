@@ -49,3 +49,12 @@ export const Toggle = styled.button`
 		width: 48px;
 	}
 `;
+export const TotalCount = styled.p`
+	text-align: center;
+	margin: 24px auto;
+	font-size: 24px;
+	font-weight: 600;
+	background: #000000cf;
+	color: white;
+	mix-blend-mode: color;
+`;
