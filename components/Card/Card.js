@@ -16,7 +16,7 @@ function Card({ title, coverImage, websiteURL, toggleGrid }) {
 				<Image
 					grid={toggleGrid}
 					src={imageBuilder(coverImage).url()}
-					alt={title}
+					alt={title + " website"}
 					layout="fill"
 				/>
 			</CardImageContainer>
