@@ -84,5 +84,6 @@ export const PageNumber = styled.p`
 
 	@media (max-width: 500px) {
 		font-size: 20px;
+		width: fit-content;
 	}
 `;
