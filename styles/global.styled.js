@@ -134,7 +134,6 @@ h6 {
 
 h1 {
   font-size:65px;
-  transition: .3s;
 }
 
 @media (max-width:1100px) {
