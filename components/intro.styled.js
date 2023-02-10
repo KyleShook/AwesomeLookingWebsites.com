@@ -1,34 +1,10 @@
-import styled, { keyframes } from "styled-components";
-
-// const fontAnimation = keyframes`
-//  0% { font-family: sans-serif; font-weight: 400; }
-//  10% { font-family: fantasy; font-weight: 400;}
-//  20% { font-family: monospace; font-weight: 400;}
-//  30% { font-family: serif; font-weight: 400;}
-//  40% { font-family: system-ui; font-weight: 400;}
-//  50% { font-family: cursive; font-weight: 400;}
-//  60% { font-family: system-ui; font-weight: 500;}
-//  70% { font-family: serif; font-weight: 600;}
-//  80% { font-family: monospace; font-weight: 700;}
-//  90% { font-family: fantasy; font-weight: 800;}
-//  100% { font-family: sans-serif; font-weight: 900;}
-
-// `;
-
-// const fontAnimation = keyframes`
-//  0%, 100% {  font-weight: 900; }
-//  25%, 75% {  font-weight: 600;}
-//  50% {  font-weight: 400;}
-// `;
+import styled from "styled-components";
 
 export const IntroContainer = styled.section`
-	/* height: calc(100vh - 164px);
-	height: calc(100vh - 164px); */
 	display: flex;
 	flex-direction: column;
 
 	@media (max-width: 768px) {
-		/* align-items: center; */
 	}
 `;
 export const PreTitle = styled.span`
@@ -38,7 +14,6 @@ export const PreTitle = styled.span`
 	-webkit-text-stroke: 2px black;
 	font-weight: 900;
 	line-height: 1;
-	/* transition: font-size 0.3s; */
 
 	@media (max-width: 1260px) {
 		font-size: 75px;
@@ -58,7 +33,6 @@ export const Title = styled.h1`
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
-	/* transition: font-size 0.5s; */
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
 
@@ -84,7 +58,6 @@ export const Emoji = styled.span`
 	text-transform: uppercase;
 	line-height: 1;
 	display: none;
-	/* transition: font-size 0.3s; */
 	cursor: pointer;
 	letter-spacing: -15px;
 
@@ -110,7 +83,6 @@ export const Letters = styled.span`
 	font-weight: 900;
 	text-transform: uppercase;
 	line-height: 1;
-	/* transition: font-size 0.3s; */
 
 	@media (max-width: 1260px) {
 		font-size: 150px;
@@ -135,7 +107,6 @@ export const TitleRight = styled.h1`
 	text-transform: uppercase;
 	line-height: 1.3;
 	text-align: right;
-	/* transition: font-size 0.5s; */
 	mix-blend-mode: difference;
 	background: ${(props) => (props.bgColor ? props.bgColor : "transparent")};
 
@@ -171,7 +142,6 @@ export const PostTitle = styled.span`
 	font-size: 40px;
 	font-weight: 900;
 	line-height: 1;
-	/* transition: font-size 0.3s; */
 
 	@media (max-width: 1260px) {
 		font-size: 45px;

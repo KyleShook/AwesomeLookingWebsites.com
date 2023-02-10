@@ -8,13 +8,11 @@ import {
 const PaginationControls = (props) => {
 	const { pageNum, nextClick, prevClick, totalPosts, anchor } = props;
 
-	const count = pageNum * 10;
+	const count = pageNum * 12;
 
-	const totalPages = Math.ceil(totalPosts / 10);
+	const totalPages = Math.ceil(totalPosts / 12);
 
 	const lastPage = count >= totalPosts;
-
-	console.log(totalPages);
 
 	return (
 		<Container>

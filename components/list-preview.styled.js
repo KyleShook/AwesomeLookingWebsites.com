@@ -3,9 +3,6 @@ import styled from "styled-components";
 export const ListingContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-
-	/* width: 100%; */
-
 	border-top: 4px solid black;
 	padding: 20px 0;
 	z-index: 10;
@@ -17,7 +14,6 @@ export const ListingContainer = styled.div`
 
 	@media (max-width: 800px) {
 		flex-direction: column;
-		/* max-width: 700px; */
 		margin: auto;
 		align-items: center;
 	}
@@ -29,7 +25,6 @@ export const InfoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	/* width: 100%; */
 	flex-grow: 1;
 
 	@media (max-width: 800px) {
@@ -45,7 +40,6 @@ export const InfoContainer = styled.div`
 export const ListTitle = styled.h3`
 	font-size: 60px;
 	font-weight: 900;
-	/* padding-top: 5px; */
 	line-height: 3rem;
 
 	@media (max-width: 1275px) {
@@ -70,7 +64,6 @@ export const BottomContainer = styled.div`
 		width: 100%;
 	}
 	@media (max-width: 800px) {
-		/* flex-direction: column; */
 		margin-top: 12px;
 
 		a {
@@ -97,7 +90,6 @@ export const MobileListTitle = styled.h3`
 	display: none;
 	font-size: 60px;
 	font-weight: 900;
-	/* line-height: 3rem; */
 	margin-top: -12px;
 
 	@media (max-width: 650px) {

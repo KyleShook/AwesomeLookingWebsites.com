@@ -40,7 +40,6 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  /* background: ${({ theme }) => theme.background}; */
   color: ${({ theme }) => theme.color};
   font-family: ${({ theme }) => theme.sansFont};
   background-image: url('/images/groovepaper.png')
@@ -127,7 +126,6 @@ h3,
 h4,
 h5,
 h6 {
- /* font-family: ${({ theme }) => theme.serifFont}; */
  font-family: ${({ theme }) => theme.sansFont};
  font-weight: 900;
 }
@@ -148,7 +146,7 @@ h1 {
 	}
 }
 
-*::-moz-selection { /* Code for Firefox */
+*::-moz-selection {
   background: black;
   color: white;
 }
