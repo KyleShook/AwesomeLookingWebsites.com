@@ -1,3 +1,3 @@
 ## Awesome Looking Websites
 
-![AwesomeLookingWebsites hero](public\images\alw-hero.png)
+![AwesomeLookingWebsites hero](https://www.awesomelookingwebsites.com/images/alw-hero.png)
