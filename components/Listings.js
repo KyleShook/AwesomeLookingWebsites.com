@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import client from "../lib/sanity";
 import { useRouter } from "next/router";
-import { Container, Wrapper } from "./pagination.styled";
 import PaginationControls from "./PaginationControls";
 import { ImageContainer, Card } from "@components";
-import { Toggle, ToggleContainer, TotalCount } from "./Listings.styled ";
+import {
+	Container,
+	Wrapper,
+	Toggle,
+	ToggleContainer,
+	TotalCount,
+} from "./Listings.styled ";
 
 const Listings = ({ posts }) => {
 	const [species, setSpecies] = useState();
@@ -58,8 +63,8 @@ const Listings = ({ posts }) => {
 			`
       *[_type == "post"] | order(publishedAt desc){
         ${postFields}
-      }[0..10]
-      [(($pageNum - 1) * 10)...($pageNum * 10)]
+      }[0..12]
+      [(($pageNum - 1) * 12)...($pageNum * 12)]
     `,
 
 			{
@@ -121,13 +126,6 @@ const Listings = ({ posts }) => {
 				</Toggle>
 			</ToggleContainer>
 			<Wrapper style={{ paddingTop: "30px" }}>
-				{/* <PaginationControls
-					prevClick={prevClick}
-					nextClick={nextClick}
-					pageNum={pageNum}
-					species={species}
-					totalPosts={totalPosts}
-				/> */}
 				{totalPosts && <TotalCount> Current count: {totalPosts} </TotalCount>}
 				<ImageContainer grid={grid}>
 					{species &&

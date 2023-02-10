@@ -1,7 +1,6 @@
 import PostPreview from "../components/post-preview";
 
 export default function MoreStories({ posts }) {
-	// console.log(posts);
 	return (
 		<section>
 			<h2>More Stories</h2>

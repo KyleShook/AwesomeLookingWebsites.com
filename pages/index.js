@@ -24,9 +24,9 @@ const HeaderContainer = styled.div`
 export default function Index({ allPosts, preview }) {
 	return (
 		<>
-			{/* <Head>
-					<title>Awesome Looking Websites</title>
-				</Head> */}
+			<Head>
+				<title>Awesome Looking Websites</title>
+			</Head>
 			<Container>
 				<HeaderContainer>
 					<h1>We think these are awesome. looking. websites.</h1>
